@@ -1,151 +1,48 @@
-<html>
+<!DOCTYPE html>
 <style>
-
-html {background-color:#D8DEE9}
-
-.squareGridContainer {display:grid;
-grid-gap: 0px;
-background-color:#ECEFF4;
-grid-template-columns: repeat(var(--grid-cols), 1fr);
-grid-template-rows: repeat(var(--grid-rows), 1fr);
-width: 980px;
-height: 980px;
-margin: auto;
-position: relative;
-top: 150px;
-}
-
-
-
-.square {background-color:#ECEFF4;
-}
-
-
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-}
-
-
-
-
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 </style>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
-    <div class="squareGridContainer"> 
+    <header>
+        <div class="background">
+            <h1>ETCH A SKETCH
+            </h1>
+        </div>
+    </header>
 
+    <div class= "container">
+    <div class= "squareGridContainer"></div> 
+    <div class= "dummy">
+        <h6>Design + Code | Ping Quach
+            <br> <img class=sig src="signature.png" width="100">
+        </h6>
     </div>
-
-
-<div><button class="generateGrid"> Generate Canvas </button></div> 
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-//Globals
-
-const squareGrid = document.querySelector('.squareGridContainer')
-const canvas = document.querySelector ('.generateGrid')
-
-//Functions
-
-function createGrid(rows, cols) {
-    squareGrid.style.setProperty('--grid-rows', rows);
-    squareGrid.style.setProperty('--grid-cols', cols);
-    for (c = 0; c < (rows * cols); c++) {
-        let square = document.createElement("div");
-        square.classList.add("square");
-        squareGrid.appendChild(square);                          
-        square.addEventListener("mouseover",
-            nord)
-}}
-
-//colors
-
-function nord(square) {square.target.style.background = "#434C5E";
-}
-
-function shading(square) {
-    square.target.style.background = "black";
-    square.target.style.opacity -= "-0.1"; 
-}
-
-function getRandColor(){
-    let letters = "0123456789ABCDEF"
-    let getRandLetter = letters.charAt(Math.floor(Math.random()*16));
-    let randColor = "#"
-    for (i=0; i<6; i++) {
-        getRandLetter = letters.charAt(Math.floor(Math.random()*16));
-        randColor += getRandLetter;
-    }
-    return randColor;
-}
-
-
-
-function rainbow(square) {
-    if (square.target.className === "square"){
-    square.target.style.background = getRandColor();
-}}
-
-function eraser(square) {square.target.style.background = "#ECEFF4"
-}
-
-//Event Listeners
-
-    canvas.addEventListener("click", function(){
-        squareGrid.innerHTML = '';                                      // clears the grid
-        const generate = prompt ("Enter canvas size (integers only)")
-
-    createGrid(generate,generate);
-
-    
-    
-    
-    
-    })
-
-
-
-    console.log(createGrid(16, 16));
-
-
-
-
-
-</script>
+    <div class= "dummy2"></div>
+    <div class= "dummy3"></div>
+    <div class ="navigation">
+        <button id= "generateGrid"> CREATE CANVAS </button>
+        <button id= "refresh">REFRESH CANVAS</button>
+        <h2 class= "tools">TOOLS</h2>
+        <button id= "nordic"> NORD </button>
+        <button id= "shading"> GRAPHITE </button>
+        <button id= "spectrum"> SPECTRUM</button>
+        <button id= "erase"> ERASE </button>
+    </div> 
+    </div>
 
 
 
 </body>
+
+<script src="script.js"></script>
+
 </html>
 
 
 
-
-
-
-
-<!-- Trying to make hex input a color choice 
-function input () {
-    let hexcode = prompt("enter hexcode");
-    let hexrandom = "#"
-    let final = (hexrandom += hexcode);
-    
-}
-
-let final; 
-
-function hex(square) {
-    if (final === "#000000"){
-    square.target.style.background = final;
-}}
--->
