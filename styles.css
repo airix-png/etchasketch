@@ -2,7 +2,7 @@ html {background-color:#D8DEE9;
     font-family:"Open Sans", sans-serif}
     
     .background {background-color: #d8dee9;
-        background-image: url('/linen.jpg');
+        background-image: url('resources/linen.jpg');
         background-repeat: repeat;
         opacity: 0.4;
         width: 100%;
@@ -19,19 +19,16 @@ html {background-color:#D8DEE9;
     left:0;
     right: 0;
     margin: auto;
+    text-shadow: 2px 3px 5px #2E3440;
+    letter-spacing: 0.05em;
     
-    }
+}
     .square {background-color:#ECEFF4;
 
 
     }
     
     
-    :root {
-        --grid-cols: 1;
-        --grid-rows: 1;
-    
-    }
     
     
     .squareGridContainer {display:grid;
@@ -48,8 +45,8 @@ html {background-color:#D8DEE9;
     margin: auto;
     left: 0;
     right: 0;
-    box-shadow: 1px 2px 4px #4C566A
-    }
+    box-shadow: 3px 4px 7px #4C566A
+}
     
     
     .container {display: grid;
@@ -68,14 +65,26 @@ html {background-color:#D8DEE9;
         grid-area: dummy;
         position:absolute;
         justify-self: baseline;
+        
     }
+    
+    h5 {position: absolute;
+        top:788px;
+        left:-160px;
+        color: #4C566A;
+        opacity: 0.3;
+        width: 190px;
+        letter-spacing: 0.12em;
+        font-size: 11px}
+    
     h6 {transform: rotate(-90deg);
     position: absolute;
     top:670px;
-    left:-86px;
+    left:-77px;
     color: #4C566A;
     opacity: 0.3;
-    width: 190px
+    width: 190px;
+    letter-spacing: 0.12em;
     }
     .dummy2 {
         grid-area: dummy2;
@@ -90,25 +99,26 @@ html {background-color:#D8DEE9;
     
     .navigation {display: grid;
         grid-area: navigation;
-        grid-template-rows: 50px 30px 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 40px 50px 50px 50px 50px;
         width: 150px;
         height: 600px;
         grid-template-areas:
         "generateGrid"
+        "dummy"
         "refresh"
         "tools"
         "nordic"
         "shading"
         "spectrum"
         "erase";
-    grid-gap: 55px;
+    grid-gap: 38px;
     position: absolute;
     opacity: 0.65;
     color: #2E3440;
     margin:auto;
     left:0;
     right:0;
-    top:90px;}
+    top:40px;}
     
     #generateGrid{
         grid-area: generateGrid;
@@ -123,6 +133,9 @@ html {background-color:#D8DEE9;
         grid-area: tools;
         text-align: center;
         font-weight: 700;
+        text-shadow: 1px 1px #2E3440;
+        opacity: 0.7;
+        letter-spacing: 0.06em;
     }
     #nordic {
         grid-area: nordic
@@ -138,25 +151,52 @@ html {background-color:#D8DEE9;
     }
     
     .sig {position: absolute;
-        bottom:-47px;
-        left:68px;
+        bottom:-45px;
+        left:93px;
         color: black;
     }
     
+    #gridlines {position: absolute;
+        width: 70px; 
+    grid-area: dummy;
+    }
+
+    #precision {position: absolute;
+    width: 70px;
+    top: 88px;
+    right: 0px;}
     
-    button {border-radius: 30px;
-    border: 1px solid #5E81AC;
-    font-weight: 600;
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
+    #color { position: absolute;
+        bottom: -142px;
+        border-radius: 30px;
+        border: 1px solid #5E81AC;
+        font-weight: 500;
+        width: 150px;
+        height: 50px;}
+
+    .btn, .btn1, .btn2, .btn3 {border-radius: 30px;
+        border: 1px solid #5E81AC;
+        font-weight: 500;
+        width: 150px;
+        height: 50px;
+        }
+
+    
+    
+    .btn:focus {
+        background-color: #5E81AC;
+        color: #ECEFF4;
+        border: 1px solid #ECEFF4;
+        outline: none
     }
     
+    button:hover {transition: all 1.2s ease;
+        background-color: #B48EAD;
+        outline: none
+    }
+    button {outline: none;
+        letter-spacing: 0.07em;}
+        
     .grid-lines {
         border: solid 1px #d8dee9;
-        box-shadow: 3px 4px 7px #4C566A
-
     }

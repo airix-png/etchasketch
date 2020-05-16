@@ -2,12 +2,17 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 </style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <embed id = myAudio src="later.mp3" autostart="true" loop ="true" width="0" height ="0"> </embed></head>
 </head>
+
 <body>
     <header>
         <div class="background">
@@ -20,29 +25,32 @@
     <div class= "squareGridContainer"></div> 
     <div class= "dummy">
         <h6>Design + Code | Ping Quach
-            <br> <img class=sig src="signature.png" width="100">
+            <br> <img class=sig src="resources/signature.png" width="100">
         </h6>
+        <h5>Music | Later - emawk</h5>
+        
     </div>
     <div class= "dummy2"></div>
     <div class= "dummy3"></div>
     <div class ="navigation">
-        <button id= "generateGrid"> CREATE CANVAS </button>
-        <button id= "refresh">REFRESH CANVAS</button>
-        <h2 class= "tools">TOOLS</h2>
-        <button id= "nordic"> NORD </button>
-        <button id= "shading"> GRAPHITE </button>
-        <button id= "spectrum"> SPECTRUM</button>
-        <button id= "erase"> ERASE </button>
-        <button id= "gridlines"> GRID LINES </button>
+        <button class = btn1 id= "generateGrid"> CREATE CANVAS </button>
+        <button class = btn2 id= "refresh">REFRESH</button>
+        <h2 class= "tools">PALETTE</h2>
+        <button  class = btn id= "nordic"> NORD </button>
+        <button class = btn id= "shading"> GRAPHITE </button>
+        <button class = btn id= "spectrum"> AURORA</button>
+        <button class = btn id= "erase"> ERASE </button>
+        <button class = btn3 id= "gridlines"> GRID</button>
+        <button class = btn3 id= "precision"> POINT</button>
+        <button id= "color"> PALETTE </button>
     </div> 
     </div>
 
 
 
 </body>
-
+<script src="vanilla-picker.min.js"></script>
 <script src="script.js"></script>
-
 </html>
 
 
