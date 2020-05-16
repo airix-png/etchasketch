@@ -22,6 +22,8 @@ html {background-color:#D8DEE9;
     
     }
     .square {background-color:#ECEFF4;
+
+
     }
     
     
@@ -46,6 +48,7 @@ html {background-color:#D8DEE9;
     margin: auto;
     left: 0;
     right: 0;
+    box-shadow: 1px 2px 4px #4C566A
     }
     
     
@@ -152,4 +155,8 @@ html {background-color:#D8DEE9;
     right: 0;
     }
     
-    
+    .grid-lines {
+        border: solid 1px #d8dee9;
+        box-shadow: 3px 4px 7px #4C566A
+
+    }
