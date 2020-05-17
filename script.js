@@ -50,12 +50,10 @@ function precision () {
     const gridSquares = document.querySelectorAll('.square');
     switch (click) {
         case 1: { gridSquares.forEach(box => box.removeEventListener('mouseover', final));
-		     gridSquares.forEach (box => box.style.opacity = "");
         gridSquares.forEach(box => box.addEventListener('click', final));}
       
         break;
         case 2: {gridSquares.forEach(box => box.removeEventListener('click', final));
-		     gridSquares.forEach (box => box.style.opacity = "");
         gridSquares.forEach(box => box.addEventListener('mouseover', final));
         
         }
@@ -75,7 +73,7 @@ canvas.addEventListener('click', function(e){
 let mode=1
 function final(e){
     switch(mode){
-    case 1: {this.style.opacity = 1;
+    case 1: {this.style.opacity = "";
         this.style.backgroundColor = "#434C5E";}
         break;
     case 2: {let opacity = Number (this.style.opacity);
@@ -83,16 +81,16 @@ function final(e){
         this.style.backgroundColor = 'black';}
     break;
     case 3: {
-        this.style.opacity = 1;
+        this.style.opacity = "";
         this.style.backgroundColor = getAuroraColor();}
         break;
     case 4: { 
-        this.style.opacity = 1;
+        this.style.opacity = "";
         this.style.background = "#ECEFF4";}
         break;
     
     case 5: {
-        this.style.opacity = 1; 
+        this.style.opacity = "";
         this.style.background = colorPick
     
     }
