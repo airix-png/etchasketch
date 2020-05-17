@@ -50,10 +50,12 @@ function precision () {
     const gridSquares = document.querySelectorAll('.square');
     switch (click) {
         case 1: { gridSquares.forEach(box => box.removeEventListener('mouseover', final));
+		     gridSquares.forEach (box => box.style.opacity = "");
         gridSquares.forEach(box => box.addEventListener('click', final));}
       
         break;
         case 2: {gridSquares.forEach(box => box.removeEventListener('click', final));
+		     gridSquares.forEach (box => box.style.opacity = "");
         gridSquares.forEach(box => box.addEventListener('mouseover', final));
         
         }
