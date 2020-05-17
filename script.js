@@ -134,8 +134,6 @@ btn6.addEventListener('click', function(e){
         {btn6.style.backgroundColor = "";
         console.log(btn6.style.backgroundColor)}; 
     const gridSquares = document.querySelectorAll('.square');
-    gridSquares.forEach (box => box.style.opacity = "")
-    gridSquares.innerHTML = "";
 	gridSquares.forEach(box => box.classList.toggle('grid-lines'));
 })
 
