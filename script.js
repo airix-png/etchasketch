@@ -84,7 +84,7 @@ function final(e){
         this.style.opacity = "";
         this.style.backgroundColor = getAuroraColor();}
         break;
-    case 4: { 
+    case 4: {
         this.style.opacity = "";
         this.style.background = "#ECEFF4";}
         break;
@@ -150,5 +150,7 @@ btn7.addEventListener('click', function switcher(e) {console.log(click)
 precision()})
 
 createGrid(20)
+
+
 
 
